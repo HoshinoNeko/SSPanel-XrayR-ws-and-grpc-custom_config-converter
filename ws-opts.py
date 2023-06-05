@@ -13,7 +13,7 @@ cnx = mysql.connector.connect(
 cursor = cnx.cursor()
 
 # Query the data to be updated
-select_query = "SELECT custom_config FROM node WHERE sort = 11 AND custom_config NOT LIKE '%grpc%'"
+select_query = "SELECT custom_config FROM node WHERE sort = 11 AND custom_config LIKE '%path%'"
 cursor.execute(select_query)
 rows = cursor.fetchall()
 
